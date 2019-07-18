@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "outDir": "server",
+        "declaration": true,
+        "moduleResolution": "node",
+        "module": "commonjs",
+        "target": "esnext"
+    },
+    "include": [
+        "app/**.ts",
+        "app/**/**.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

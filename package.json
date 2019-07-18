@@ -1,0 +1,26 @@
+{
+  "name": "mall-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/server.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc -p tsconfig.json",
+    "tslint": "tslint --project .",
+    "start": "npm run tsc && cross-env NODE_ENV=production nodemon server/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "lodash": "^4.17.14",
+    "pg": "^7.11.0",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "nodemon": "^1.19.1"
+  }
+}
