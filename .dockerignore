@@ -1,0 +1,7 @@
+.git
+.idea
+node_modules
+.vscode
+logs
+server/
+.gitignore
