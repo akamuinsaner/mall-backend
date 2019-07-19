@@ -17,7 +17,8 @@
         "quotemark": [true, "single", "jsx-double"],
         "ordered-imports": false,
         "no-shadowed-variable": false,
-        "only-arrow-functions": false
+        "only-arrow-functions": false,
+        "object-literal-sort-keys": false
     },
     "jsRules": {
         "max-line-length": {

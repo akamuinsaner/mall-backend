@@ -1,24 +1,14 @@
 import * as express from 'express';
-import connection from './connector';
+import routes from './routes';
+import * as dotenv from 'dotenv';
+import * as path from 'path';
+
+dotenv.config({ path: path.resolve(process.cwd(), 'config') });
 
 const app = express();
 
-
-app.get('/', (req, res) => {
-    connection(
-        `
-            select * from user_tb
-        `,
-        [],
-    ).then(data => {
-        res.send(data.rows);
-    });
-});
-app.post('/user', () => {
-
-});
-
+routes(app);
 
 app.listen(7000, () => {
-    console.log('Example app listening on port 3000!');
+    console.log('Example app listening on port 7000!');
 });
