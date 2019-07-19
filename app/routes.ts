@@ -1,5 +1,9 @@
 import * as hello from './controller/hello';
 
-export default (app) => {
+const use = (app) => {
     app.get('/', hello.list);
+};
+
+export {
+    use,
 };

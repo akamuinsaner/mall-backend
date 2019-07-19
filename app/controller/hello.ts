@@ -1,4 +1,4 @@
-import connect from '../connector';
+import connect from '../db';
 
 export const list = async (req, res) => {
     const connector = await connect('postgres');

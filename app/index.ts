@@ -1,13 +1,16 @@
 import * as express from 'express';
-import routes from './routes';
+import * as routes from './routes';
 import * as dotenv from 'dotenv';
 import * as path from 'path';
+import * as logger from './logger';
 
 dotenv.config({ path: path.resolve(process.cwd(), 'config') });
 
 const app = express();
 
-routes(app);
+logger.use(app, 'info');
+
+routes.use(app);
 
 app.listen(7000, () => {
     console.log('Example app listening on port 7000!');
