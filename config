@@ -1,4 +1,5 @@
-DB_HOST=localhost
-DB_USER=postgres
-DB_PASSWORD=123456
-DB_PORT=8989
+DB_HOST=$pg_host
+DB_USER=$pg_user
+DB_PASSWORD=$pg_pwd
+DB_PORT=$pg_port
+DB_DATABASE=$pg_db
