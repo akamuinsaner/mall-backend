@@ -1,4 +1,4 @@
-CREATE TABLE user_tb(
+CREATE TABLE animal(
     id integer primary key not null,
     name varchar(32) not null
 )
