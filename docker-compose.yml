@@ -1,4 +1,4 @@
-version: '3'
+version: '3.7'
 services:
   flyway:
     image: boxfuse/flyway:5.2.4
@@ -34,9 +34,9 @@ services:
       - ./logs:/root/app/logs
     environment:
       - pg_user=root
-      - pg_host=postgres
+      - pg_host=db
       - pg_pwd=123456
-      - pg_db=db
+      - pg_db=postgres
       - pg_port=5432
     ports:
       - "7001:7000"

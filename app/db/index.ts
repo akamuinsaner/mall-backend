@@ -1,7 +1,7 @@
 import { Client, Connection } from 'pg';
 
 export default async (
-    database: string,
+    database: string = process.env.DB_DATABASE,
 ) => {
     const connectionConfig = {
         user: process.env.DB_USER,
@@ -9,13 +9,17 @@ export default async (
         password: process.env.DB_PASSWORD,
         port: process.env.DB_PORT,
     };
-
+    console.log(connectionConfig)
     const conn: Connection = new Client({
         ...connectionConfig,
         database,
     });
+    try {
+        await conn.connect();
+    } catch (e) {
+        throw new Error("cant connect to db")
+    }
 
-    await conn.connect();
 
     return {
         execute: (sql: string, values?: any[]) => new Promise((resolve, reject) => {
